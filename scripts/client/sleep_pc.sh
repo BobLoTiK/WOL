@@ -6,4 +6,5 @@ if ssh -p "$RELAY_SSH_PORT" -o ConnectTimeout=5 "$RELAY_USER@$RELAY_IP" 'echo OK
     "ssh $PC_USER@$PC_IP 'rundll32.exe powrprof.dll,SetSuspendState 0,1,0'"
 else
   echo '❌ Домашний телефон не отвечает'
+  exit 1
 fi

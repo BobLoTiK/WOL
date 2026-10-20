@@ -6,4 +6,5 @@ if ssh -p "$RELAY_SSH_PORT" -o ConnectTimeout=5 "$RELAY_USER@$RELAY_IP" 'echo OK
     "ssh $PC_USER@$PC_IP 'shutdown /s /t 0'"
 else
   echo '❌ Домашний телефон не отвечает'
+  exit 1
 fi
