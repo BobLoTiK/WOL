@@ -17,12 +17,18 @@ Wake-on-LAN + SSH + Tailscale — бесплатно, из любой точки
 [Основной телефон] ➡️ (Tailscale VPN) ➡️ [Домашний телефон · реле] ➡️ (LAN + SSH) ➡️ [ПК]
 ```
 
-## 🚀 Быстрый старт
+## 🚀 Быстрый старт (на основном телефоне)
+
+> Раздел — только про развёртывание проекта. Сначала выполните [часть 1](docs/01-pc-windows.md) (ПК) и [часть 2](docs/02-home-phone-relay.md) (реле), а на оба телефона поставьте Tailscale и Termux (F-Droid).
 
 ```bash
-git clone <repo>
-cd pc-remote-control
+pkg update -y && pkg install -y openssh git
+git clone https://github.com/BobLoTiK/WOL ~/pc-remote-control
+cd ~/pc-remote-control
 cp config/config.example.sh config/config.sh
-nano config/config.sh          # вписать свои IP/MAC/юзеров
+nano config/config.sh            # свои IP/MAC/юзеров
 chmod +x scripts/relay/*.sh scripts/client/*.sh config/*.sh
 ```
+
+Дальше: скопировать `scripts/relay/wol.sh` на реле, настроить SSH-ключи и алиасы — [часть 3](docs/03-main-phone-client.md) и [часть 4](docs/04-scripts.md).
+

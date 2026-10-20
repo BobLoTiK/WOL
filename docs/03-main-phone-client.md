@@ -10,7 +10,7 @@ pkg update -y && pkg install -y openssh git
 ## 3.1 · Клонирование проекта
 
 ```bash
-git clone <your-repo-url> ~/pc-remote-control
+git clone https://github.com/BobLoTiK/WOL ~/pc-remote-control
 cd ~/pc-remote-control
 cp config/config.example.sh config/config.sh
 nano config/config.sh          # вписать свои IP/MAC/юзеров
