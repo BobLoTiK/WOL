@@ -1,0 +1,11 @@
+# Секреты — не коммитим
+config/config.sh
+
+# Python-артефакты
+__pycache__/
+*.pyc
+
+# ОС
+.DS_Store
+Thumbs.db
+

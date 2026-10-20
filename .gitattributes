@@ -1,0 +1,3 @@
+# Скрипты Termux должны иметь LF, иначе shebang ломается
+*.sh text eol=lf
+*.md text eol=lf
